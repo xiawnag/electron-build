@@ -1,0 +1,6 @@
+appId: "111111"
+productName: "linux安装包"
+directories:
+  output: dist_linux
+linux:
+  target: 'deb'

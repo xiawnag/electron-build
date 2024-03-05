@@ -1,0 +1,6 @@
+{
+  "server_url": "http://oa.elonnx.com/elon_server",
+  "socket_url": "ws://oa.elonnx.com:8458/socket/im",
+  "preview_url": "http://47.92.152.125:8080/suwell-web-reader/reader",
+  "indexHtml_url": "http://oa.elonnx.com/elonoa"
+}

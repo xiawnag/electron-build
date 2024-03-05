@@ -1,0 +1,6 @@
+{
+  "server_url": "http://47.92.99.140:8181/wzh_server",
+  "socket_url": "ws://47.92.99.140:8182/socket/im",
+  "preview_url": "http://47.92.152.125:8080/suwell-web-reader/reader",
+  "indexHtml_url": "http://47.92.99.140:8181/wzh"
+}
