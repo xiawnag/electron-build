@@ -14,8 +14,10 @@
     "postuninstall": "electron-builder install-app-deps",
     "packager:linux-x64": "electron-packager . myApp --platform=linux --arch=arm64 --out=release-builds --overwrite",
     "packager:linux-arm64": "electron-packager ./ linuxApp --platform=linux --arch=arm64   --overwrite --no-prune --ignore=/node_modules",
-    "electron:generate-icons": "electron-icon-builder --input=./public/icon.png --output=build --flatten"
-  },
+    "electron:generate-icons": "electron-icon-builder --input=./public/icon.png --output=build --flatten",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder -p always"
+},
   "main": "background.js",
   "dependencies": {
     "core-js": "^3.8.3",
