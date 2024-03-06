@@ -27,4 +27,4 @@ jobs:
         run: yarn install # 或者您可以使用 npm install
 
       - name: Run build
-        run: yarn run buildmac # 或者您可以使用 npm test
+        run: yarn run buildwin # 或者您可以使用 npm test
