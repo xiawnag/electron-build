@@ -14,7 +14,8 @@ jobs:
         yarn install && yarn run electron:build
     - name: Upload File
       uses: actions/upload-artifact@v2
-      with:
+      with:  
+        node-version: 14.19.0
         name: windows
         path: dist/*exe
   buildmac:
@@ -27,5 +28,6 @@ jobs:
     - name: Upload File
       uses: actions/upload-artifact@v2
       with:
+        node-version: 14.19.0
         name: mac
         path: dist/*dmg
