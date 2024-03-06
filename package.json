@@ -1,6 +1,7 @@
 {
   "name": "im_electron",
   "version": "0.1.1",
+  "author": "xiawang <1822028871@qq.com>",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
