@@ -4,35 +4,28 @@ on:
   push:
     branches:
       - main
-
 jobs:
-  build:
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [macos-latest, windows-latest, ubuntu-latest]
-
+  buildwin:
+    runs-on: windows-2022
     steps:
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: 14
-
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Install dependencies
-        run: npm install
-
-      - name: Build Electron application
-        run: npm run build
-
-      - name: Package Electron application
-        run: npm run package
-
-      - name: Upload artifacts
-        uses: actions/upload-artifact@v2
-        with:
-          name: electron-app
-          path: path/to/your/electron-app
+    - uses: actions/checkout@v2
+    - name: Install and Build
+      run:
+        cd src && npm install && npm run buildwin
+    - name: Upload File
+      uses: actions/upload-artifact@v2
+      with:
+        name: windows
+        path: dist/*exe
+  buildmac:
+    runs-on: macos-11
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install and Build
+      run:
+        cd src && npm install && npm run buildmac
+    - name: Upload File
+      uses: actions/upload-artifact@v2
+      with:
+        name: mac
+        path: dist/*dmg
